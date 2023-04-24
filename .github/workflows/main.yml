@@ -1,0 +1,24 @@
+name: Checkmarx SAST Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+    
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Checkmarx CxFlow Action
+      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4 #Github Action version
+      with:
+        project: CxFlowGitHub-master
+        team: CxServer/CxFlow
+        checkmarx_url: https://mdl.sast.newyorklife.com/
+        checkmarx_username: Chmx_APITestUser
+        checkmarx_password: SASTApi@2020
+        checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
+        break_build: false
+        scanners: sast
