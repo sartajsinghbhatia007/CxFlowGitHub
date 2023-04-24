@@ -16,7 +16,7 @@ jobs:
       with:
         project: CxFlowGitHub-master
         team: CxServer/CxFlow
-        checkmarx_url: https://mdl.sast.newyorklife.com/
+        checkmarx_url: https://mdl.sast.newyorklife.com
         checkmarx_username: Chmx_APITestUser
         checkmarx_password: SASTApi@2020
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
