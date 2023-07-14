@@ -1,8 +1,10 @@
 name: SBOM
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+      - master
 
 jobs:
   sbom:
